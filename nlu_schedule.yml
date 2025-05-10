@@ -1,0 +1,52 @@
+version: "3.1"
+
+nlu:
+- intent: schedule
+  examples: |
+    - 학사일정
+    - 일정
+    - 캘린더
+    - 일정정보
+    - 기간
+    - 정보
+    - 날짜
+
+- intent: starts
+  examples: |
+    - 개강
+    - 개학
+    - 개강일자
+    - 개강정보
+    - 학기 시작
+    - 등교
+
+- intent: course
+  examples: |
+    - 수강 신청
+    - 수업 등록
+    - 강의 신청
+    - 티켓팅
+    - 신청일
+    - 신청주
+    - 수업
+
+- intent: midex
+  examples: |
+    - 중간고사
+    - 중간시험
+    - 간시
+    - midle test
+    - 1차고사
+    - 중간
+
+- intent: finex
+  examples: |
+    - 기말고사
+    - 기말시험
+    - final test
+    - 마지막 시험
+    - 말시
+    - 2차고사
+    - 학기말
+    - 기말
+
