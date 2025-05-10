@@ -1,0 +1,39 @@
+version: "3.1"
+
+nlu:
+- intent: lec_time
+  examples: |
+    - 강의시간
+    - 강의 시간
+    - 시간
+    - 시간표
+    - 강의일
+    - 강의 날짜
+    - 수업시간
+    - 수업
+
+- intent: lec_room
+  examples: |
+    - 강의실
+    - 빈 강의실
+    - 위치
+    - 강의실 위치
+    - 건물
+    - 수업 위치
+    - 실습실
+    - 연구실
+    - 층
+
+- intent: lec_professer
+  examples: |
+    - 교수
+    - 이메일
+    - 전화번호
+    - 선생
+    - 연구실
+    - 대학원
+    - 연락처
+    - 연구
+    - 정보
+    - 직원
+
