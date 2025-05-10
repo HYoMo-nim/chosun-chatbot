@@ -1,0 +1,41 @@
+version: "3.1"
+
+intents:
+  - schedule
+  - starts
+  - course
+  - midex
+  - finex
+  - lec_time
+  - lec_room
+  - lec_professer
+
+responses:
+  utter_schedule:
+  - text: "학사 일정은 아래와 같아요."
+
+  utter_starts:
+  - text: "이번 학기의 개강 일자는 3/2입니다."
+
+  utter_course:
+  - text: "이번 학기 수강 신청 일자는 다음과 같습니다."
+    text: "초과학기/4학년: 2/24	3학년: 2/25	2학년: 2/26	1학년: 2/27"
+
+  utter_midex:
+  - text: "이번학기 중간고사 기간은 4/22-4/28입니다. "
+
+  utter_finex:
+  - text: "이번학기 기말고사 기간은 6/17-6/23입니다. "
+
+  utter_lec_time:
+  - text: "강의명 및 분반을 입력해주세요. "
+  
+  utter_lec_room:
+  - text: "본 강의실은 이곳에 위치해있습니다. "
+  
+  utter_lec_professer: 
+  - text: "교직원 정보는 아래와 같습니다. "
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
