@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+- rule: 식당 메뉴 요청시 응답
+  steps:
+  - intent: ask_menu
+  - action: action_provide_menu

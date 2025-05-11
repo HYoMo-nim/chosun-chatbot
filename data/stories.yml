@@ -1,0 +1,7 @@
+version: "3.1"
+
+stories:
+- story: 식당 질문 예시 시나리오
+  steps:
+  - intent: ask_menu
+  - action: action_provide_menu

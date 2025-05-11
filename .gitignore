@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtualenv
+venv/
+.env/
+
+# Rasa
+*.db
+*.tar.gz
+models/
+
+# VSCode
+.vscode/
+
+# Data caches
+*.log
+

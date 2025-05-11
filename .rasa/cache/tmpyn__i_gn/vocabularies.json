@@ -1,0 +1,39 @@
+{
+  "text": {
+    "오늘": 10,
+    "점심": 13,
+    "뭐야": 5,
+    "기숙사": 1,
+    "식당": 8,
+    "저녁": 12,
+    "뭐": 4,
+    "나와": 2,
+    "솔마루": 6,
+    "메뉴": 3,
+    "알려줘": 9,
+    "금요일": 0,
+    "솔마루에": 7,
+    "있어": 11
+  },
+  "intent": {
+    "ask_menu": 0
+  },
+  "response": null,
+  "action_name": {
+    "action_listen": 6,
+    "action_restart": 8,
+    "action_session_start": 10,
+    "action_default_fallback": 4,
+    "action_deactivate_loop": 1,
+    "action_revert_fallback_events": 9,
+    "action_default_ask_affirmation": 2,
+    "action_default_ask_rephrase": 3,
+    "action_two_stage_fallback": 11,
+    "action_unlikely_intent": 12,
+    "action_back": 0,
+    "action_extract_slots": 5,
+    "action_provide_menu": 7
+  },
+  "action_text": null,
+  "intent_response_key": null
+}
