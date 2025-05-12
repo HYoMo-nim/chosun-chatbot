@@ -44,7 +44,7 @@
   - 언어: Python 3.8  
   - 프레임워크: Rasa Open Source  
 - **Database**  
-  - *계획중*  
+  - Json
 - **Frontend**  
   - *계획중*  
 - **Version Control**  
