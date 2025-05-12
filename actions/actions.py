@@ -67,3 +67,59 @@ class ActionProvideMenu(Action):
                 dispatcher.utter_message(
                     text=f"{restaurant}의 {day} {meal_time} 메뉴 정보가 없어요.")
             return []
+
+
+
+
+class ActionProvideNotice(Action):
+    def name(self) -> Text:
+        return "action_provide_notice"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        # 사용자가 입력한 문장
+        user_text = tracker.latest_message.get('text', '').lower()
+
+        # 공지사항 파일 경로
+        path = os.path.join("data", "notice.json")
+
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)["notices"]
+        except:
+            dispatcher.utter_message("공지사항 데이터를 불러올 수 없습니다.")
+            return []
+
+        filtered = []
+
+        # 날짜 필터링 (오늘, 날짜 포함 여부)
+        today = datetime.date.today().isoformat()
+        if "오늘" in user_text:
+            filtered = [n for n in data if n["date"] == today]
+        else:
+            for n in data:
+                if any(date in user_text for date in [n["date"], n["date"].replace("-", ".")]):
+                    filtered.append(n)
+
+        # 키워드 또는 카테고리 필터링
+        keywords = ["장학", "수강", "행사", "채용", "복학", "졸업", "등록"]
+        for k in keywords:
+            if k in user_text:
+                filtered += [n for n in data if k in n["title"].lower() or k in n["category"].lower()]
+
+        # 중복 제거
+        filtered = list({n['title']:n for n in filtered}.values())
+
+        # 기본: 전체 상위 3개
+        if not filtered:
+            filtered = data[:3]
+
+        # 응답 구성
+        msg = "📢 공지사항:\n"
+        for n in filtered[:5]:
+            msg += f"- {n['title']} ({n['date']})\n  👉 {n['url']}\n"
+
+        dispatcher.utter_message(msg.strip())
+        return []

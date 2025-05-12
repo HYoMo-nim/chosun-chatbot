@@ -5,3 +5,4 @@ stories:
   steps:
   - intent: ask_menu
   - action: action_provide_menu
+

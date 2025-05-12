@@ -2,7 +2,8 @@ version: "3.1"
 
 intents:
   - ask_menu
+  - ask_notice
 
 actions:
   - action_provide_menu
-
+  - action_provide_notice

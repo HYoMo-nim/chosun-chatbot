@@ -5,3 +5,8 @@ rules:
   steps:
   - intent: ask_menu
   - action: action_provide_menu
+
+- rule: 공지사항 응답하기
+  steps:
+  - intent: ask_notice
+  - action: action_provide_notice
