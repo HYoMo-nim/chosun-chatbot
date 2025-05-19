@@ -1,0 +1,46 @@
+{
+	"lectures": [
+		{
+		"subject" : "소프트웨어공학",
+		"code" : "22011",
+		"grade" : "3",
+		"professor": "신은숙",
+		"classroom": "IT융합대학 2221"
+		}, 
+		{
+		"subject" : "컴퓨터네트워크",
+		"code" : "22620",
+		"grade" : "3",
+		"professor": "김준형",
+		"classroom": "IT융합대학 2105-1"
+		}, 
+		{
+		"subject" : "인터넷보안",
+		"code" : "40018",
+		"grade" : "3",
+		"professor": "김현일",
+		"classroom": "IT융합대학 3120"
+		}, 
+		{
+		"subject" : "오픈소스SW개론",
+		"code" : "44875",
+		"grade" : "3",
+		"professor": "이건우",
+		"classroom": "IT융합대학 3208"
+		}, 
+		{
+		"subject" : "WEB프로그래밍",
+		"code" : "46294",
+		"grade" : "3",
+		"professor": "이건우",
+		"classroom": "IT융합대학 2210"
+		}, 
+		{
+		"subject" : "딥러닝기초",
+		"code" : "47071",
+		"grade" : "3",
+		"professor": "이범식",
+		"classroom": "IT융합대학 8206"
+		} 
+	]
+}

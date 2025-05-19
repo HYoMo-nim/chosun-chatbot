@@ -1,0 +1,22 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_lecture\"}}]": "answer_lecture",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_lecture\"}}, {\"prev_action\": {\"action_name\": \"answer_lecture\"}, \"user\": {\"intent\": \"ask_lecture\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_schedule\"}}]": "answer_lecture",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_schedule\"}}, {\"prev_action\": {\"action_name\": \"answer_lecture\"}, \"user\": {\"intent\": \"ask_schedule\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_lecture\"}}, {\"prev_action\": {\"action_name\": \"answer_lecture\"}, \"user\": {\"intent\": \"ask_lecture\"}}]",
+      "predicting default action with intent back",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_schedule\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_lecture\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_schedule\"}}, {\"prev_action\": {\"action_name\": \"answer_lecture\"}, \"user\": {\"intent\": \"ask_schedule\"}}]"
+    ]
+  }
+}

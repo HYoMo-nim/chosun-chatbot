@@ -1,0 +1,51 @@
+{
+  "text": {
+    "소프트웨어공학": 11,
+    "강의실이": 3,
+    "어디야": 18,
+    "김준형": 7,
+    "교수님은": 5,
+    "무슨": 10,
+    "수업을": 13,
+    "담당하시지": 9,
+    "__number__": 2,
+    "44875는": 1,
+    "3학점을": 0,
+    "개강일은": 4,
+    "언제야": 21,
+    "종강일을": 23,
+    "알고싶어": 17,
+    "수강신청은": 12,
+    "언제부터": 20,
+    "시작해": 15,
+    "신청한": 16,
+    "정정하고싶어": 22,
+    "중간고사는": 24,
+    "언제": 19,
+    "끝나": 8,
+    "기말고사가": 6,
+    "시작하는지": 14
+  },
+  "intent": {
+    "ask_lecture": 0,
+    "ask_schedule": 1
+  },
+  "response": null,
+  "action_name": {
+    "action_listen": 6,
+    "action_restart": 7,
+    "action_session_start": 9,
+    "action_default_fallback": 4,
+    "action_deactivate_loop": 1,
+    "action_revert_fallback_events": 8,
+    "action_default_ask_affirmation": 2,
+    "action_default_ask_rephrase": 3,
+    "action_two_stage_fallback": 10,
+    "action_unlikely_intent": 11,
+    "action_back": 0,
+    "action_extract_slots": 5,
+    "answer_lecture": 12
+  },
+  "action_text": null,
+  "intent_response_key": null
+}

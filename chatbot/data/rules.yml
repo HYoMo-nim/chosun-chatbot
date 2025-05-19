@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+
+- rule: 강의 정보 질문
+  steps:
+  - intent: ask_lecture
+  - action: answer_lecture
+
+- rule: 학사 일정 질문
+  steps:
+  - intent: ask_schedule
+  - action: answer_lecture

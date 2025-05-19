@@ -1,0 +1,12 @@
+version: "3.1"
+
+stories:
+- story: 강의 정보 질문
+  steps:
+   - intent: ask_lecture
+   - action: answer_lecture
+   
+- story: 일정 안내
+  steps:
+  - intent: ask_schedule
+  - action: answer_lecture
