@@ -1,0 +1,45 @@
+version: "3.1"
+
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_club_events
+  - action: action_show_club_events
+  - intent: thank
+  - action: utter_welcome
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_specific_faq
+  - action: action_answer_faq
+  - intent: thank
+  - action: utter_welcome
+
+- story: challenge path
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  
+- story: club events path
+  steps:
+  - intent: ask_club_events
+  - action: action_show_club_events
+  
+- story: club events detail path
+  steps:
+  - intent: ask_club_events_detail
+  - action: action_show_club_event_detail
+  
+- story: faq general path
+  steps:
+  - intent: ask_faq
+  - action: action_show_faq_list
+  
+- story: specific faq path
+  steps:
+  - intent: ask_specific_faq
+  - action: action_answer_faq

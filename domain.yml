@@ -1,0 +1,47 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thank
+  - bot_challenge
+  - ask_club_events
+  - ask_club_events_detail
+  - ask_faq
+  - ask_specific_faq
+
+entities:
+  - event_name
+
+slots:
+  event_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: event_name
+
+responses:
+  utter_greet:
+  - text: "안녕하세요! 조선대학교 캠퍼스 챗봇입니다. 무엇을 도와드릴까요?"
+  - text: "반갑습니다! 캠퍼스 생활 정보를 안내해드립니다. 어떤 정보가 필요하신가요?"
+  
+  utter_goodbye:
+  - text: "안녕히 가세요!"
+  - text: "다음에 또 이용해주세요!"
+  
+  utter_welcome:
+  - text: "천만에요! 다른 도움이 필요하시면 말씀해주세요."
+  - text: "별말씀을요! 더 궁금한 점이 있으시면 언제든지 물어보세요."
+  
+  utter_iamabot:
+  - text: "저는 조선대학교 캠퍼스 정보를 안내해드리는 AI 챗봇입니다."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_show_club_events
+  - action_show_club_event_detail
+  - action_show_faq_list
+  - action_answer_faq

@@ -1,0 +1,42 @@
+version: "3.1"
+
+rules:
+- rule: 인사할 때마다 응답
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: 작별 인사할 때마다 응답
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: 감사할 때마다 응답
+  steps:
+  - intent: thank
+  - action: utter_welcome
+
+- rule: 봇에 도전할 때마다 응답
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  
+- rule: 동아리 행사 정보 요청할 때마다 응답
+  steps:
+  - intent: ask_club_events
+  - action: action_show_club_events
+  
+- rule: 특정 동아리 행사 정보 요청할 때마다 응답
+  steps:
+  - intent: ask_club_events_detail
+  - action: action_show_club_event_detail
+  
+- rule: FAQ 목록 요청할 때마다 응답
+  steps:
+  - intent: ask_faq
+  - action: action_show_faq_list
+  
+- rule: 특정 FAQ 질문할 때마다 응답
+  steps:
+  - intent: ask_specific_faq
+  - action: action_answer_faq
