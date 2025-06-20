@@ -1,12 +1,18 @@
 version: "3.1"
 
 stories:
-- story: 강의 정보 질문
+- story: 교수 정보 질문 흐름
   steps:
-   - intent: ask_lecture
-   - action: answer_lecture
-   
-- story: 일정 안내
+    - intent: ask_professor_info
+    - action: action_professor_info
+
+- story: 과목 정보 질문 흐름
   steps:
-  - intent: ask_schedule
-  - action: answer_lecture
+    - intent: ask_course_by_name
+    - action: action_course_by_name
+    
+- story: 학사일정 질문
+  steps:
+    - intent: ask_academic_schedule
+    - action: action_academic_schedule
+

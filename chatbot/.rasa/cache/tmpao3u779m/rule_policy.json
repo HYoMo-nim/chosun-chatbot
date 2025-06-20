@@ -1,0 +1,24 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_professor_info\"}}]": "action_professor_info",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_professor_info\"}}, {\"prev_action\": {\"action_name\": \"action_professor_info\"}, \"user\": {\"intent\": \"ask_professor_info\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_course_by_name\"}}]": "action_course_by_name",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_course_by_name\"}}, {\"prev_action\": {\"action_name\": \"action_course_by_name\"}, \"user\": {\"intent\": \"ask_course_by_name\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_courses_by_type\"}}]": "action_courses_by_type",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_courses_by_type\"}}, {\"prev_action\": {\"action_name\": \"action_courses_by_type\"}, \"user\": {\"intent\": \"ask_courses_by_type\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_course_by_code\"}}]": "action_course_by_code",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_course_by_code\"}}, {\"prev_action\": {\"action_name\": \"action_course_by_code\"}, \"user\": {\"intent\": \"ask_course_by_code\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_courses_by_credit\"}}]": "action_courses_by_credit",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_courses_by_credit\"}}, {\"prev_action\": {\"action_name\": \"action_courses_by_credit\"}, \"user\": {\"intent\": \"ask_courses_by_credit\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "predicting default action with intent back"
+    ]
+  }
+}

@@ -1,9 +1,34 @@
 version: "3.1"
 
 intents:
-  - ask_lecture
-  - ask_schedule 
-  
-actions: 
-  - answer_lecture
-  - answer_schedule
+  - ask_professor_info
+  - ask_course_by_name
+  - ask_academic_schedule
+
+entities:
+  - academic_date
+
+responses:
+  utter_ask_professor_name:
+    - text: "교수님 성함을 알려주세요."
+  utter_ask_course_name:
+    - text: "과목명을 입력해주세요."
+  utter_ask_academic_date:
+    - text: "원하시는 날짜를 `예: 6월 30일`처럼 말씀해 주세요."
+
+actions:
+  - action_professor_info
+  - action_course_by_name
+  - action_academic_schedule
+
+slots:
+  academic_date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: academic_date
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+

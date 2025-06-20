@@ -1,0 +1,64 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_course_by_code": 0,
+        "ask_course_by_name": 1,
+        "ask_courses_by_credit": 2,
+        "ask_courses_by_type": 3,
+        "ask_professor_info": 4,
+        "back": 5,
+        "nlu_fallback": 6,
+        "out_of_scope": 7,
+        "restart": 8,
+        "session_start": 9
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_professor_info": 13,
+        "action_course_by_name": 14,
+        "action_course_by_code": 15,
+        "action_courses_by_credit": 16,
+        "action_courses_by_type": 17,
+        "utter_ask_course_code": 18,
+        "utter_ask_course_name": 19,
+        "utter_ask_course_type": 20,
+        "utter_ask_credit": 21,
+        "utter_ask_professor_name": 22
+      },
+      "entities": {
+        "course_code": 0,
+        "course_name": 1,
+        "course_type": 2,
+        "credit": 3,
+        "professor_name": 4
+      },
+      "slots": {
+        "professor_name_0": 0,
+        "course_name_0": 1,
+        "course_code_0": 2,
+        "credit_0": 3,
+        "credit_1": 4,
+        "course_type_0": 5
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

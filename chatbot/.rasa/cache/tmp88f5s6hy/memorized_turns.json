@@ -1,0 +1,15 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fnF9aVJwan1QJZKWk1tbGAgBzXiDR": "action_course_by_code",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fnF9aVJwan1QJZKWk1hJnIJomogyOBQDPbEMn": "action_listen",
+    "eJwtisEJgDAMAFfpAE7QVURCjXkENZUkFaR0dwP6u+Nu7mNK/VK6oaBzlZz6ByDlpJx+OdicJN5mpPGwhHpk2wFrUyOD9QFU2tjHWF7Y2CIk": "action_courses_by_credit",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fnF9aVJxaHJ9UGZ9clJqSWVJLnJmY+og1PhYAVnlHIA==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1fUJSfllpcnF8Un5mXll9bGwsAdNAg+g==": "action_professor_info",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB1fUJSfllpcnF8Un5mXll9LnIFomogyOBYA58dDog==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fnF9aVJxaHJ9UGV9SWZBaWxsLAJX3IWs=": "action_courses_by_type",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fnF9aVJxaHJ9UGV9SWZBaS5yJ6LqIMzoWALtGRPU=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fnF9aVJwan1QJ1lJbGwsAc4Qg1w==": "action_course_by_name",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fnF9aVJwan1QJ1lJLnIFomogyOBYA0sxDOQ==": "action_listen"
+  }
+}

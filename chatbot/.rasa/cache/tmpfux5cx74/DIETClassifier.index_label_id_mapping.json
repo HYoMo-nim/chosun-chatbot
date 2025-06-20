@@ -1,0 +1,7 @@
+{
+  "0": "ask_course_by_code",
+  "1": "ask_course_by_name",
+  "2": "ask_courses_by_credit",
+  "3": "ask_courses_by_type",
+  "4": "ask_professor_info"
+}

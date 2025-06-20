@@ -1,19 +1,42 @@
 version: "3.1"
 
 nlu:
-- intent: ask_lecture
+- intent: ask_professor_info
   examples: |
-    - 소프트웨어공학 강의실이 어디야? 
-    - 김준형 교수님은 무슨 수업을 담당하시지?
-    - 3120 강의실에서 무슨 수업이 진행되는지 모르겠어
-    - 과목번호 44875는 무슨 수업이야?
-    - 3학점을 채울 수 있는 수업은 뭐가있을까?
+    - [김현일](professor_name)
+    - [김준형](professor_name)
+    - [이건우](professor_name)
+    - [변재영](professor_name) 교수님
+    - [권구락](professor_name) 교수님 이메일 알려줘
+    - [최광석](professor_name) 교수님 연구실이 어디야?
+    - [최동유](professor_name) 교수님 어떤 과목 담당하시나요?
+    - [이범식](professor_name) 교수님 정보 보여줘
+    - [신영숙](professor_name) 교수님 메일 주소
+    
+- intent: ask_course_by_name
+  examples: |
+    - 운영체제 시간표
+    - 데이터베이스 강의정보
+    - 인공지능 수업 알려줘
+    - 컴퓨터구조 과목 정보
 
-- intent: ask_schedule
+- intent: ask_academic_schedule
   examples: |
-    - 개강일은 언제야?
-    - 종강일을 알고싶어
-    - 수강신청은 언제부터 시작해?
-    - 신청한 수업을 정정하고싶어.
-    - 중간고사는 언제 끝나?
-    - 기말고사가 언제 시작하는지 알고싶어
+    - 6월 20일 학사일정
+    - 6월 6일에 뭐 있어?
+    - 6월 3일은 무슨 날이야?
+    - 6월 11일 무슨 일정 있어?
+
+
+- lookup: professor_name
+  examples: |
+    - 김현일
+    - 김준형
+    - 권구락
+    - 이건우
+    - 최광석
+    - 최동유
+    - 이범식
+    - 신영숙
+    - 변재영
+
