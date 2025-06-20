@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rasa Chatbot</title>
+  <style>
+    /* —— CSS (style.css) —— */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+    #chat-container {
+      width: 100%;
+      max-width: 600px;
+      height: 80vh;
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      overflow: hidden;
+    }
+    #messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+    }
+    .message {
+      margin: 10px 0;
+      padding: 10px 15px;
+      border-radius: 20px;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+    .message.user {
+      background: #0084ff;
+      color: #fff;
+      align-self: flex-end;
+      border-bottom-right-radius: 0;
+    }
+    .message.bot {
+      background: #e5e5ea;
+      color: #000;
+      align-self: flex-start;
+      border-bottom-left-radius: 0;
+    }
+    #input-container {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+    #user-input {
+      flex: 1;
+      border: none;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    #user-input:focus {
+      outline: none;
+    }
+    #send-btn {
+      border: none;
+      padding: 0 20px;
+      background: #0084ff;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #send-btn:hover {
+      background: #006bbf;
+    }
+  </style>
+</head>
+<body>
+  <!-- —— HTML (index.html) —— -->
+  <div id="chat-container">
+    <div id="messages"></div>
+    <div id="input-container">
+      <input
+        type="text"
+        id="user-input"
+        placeholder="메시지를 입력하세요..."
+        autocomplete="off"
+      />
+      <button id="send-btn">전송</button>
+    </div>
+  </div>
+
+  <script>
+    // Flask 백엔드 URL로 변경
+    const API_URL = 'http://localhost:8000/send_message';
+
+    const inputBox = document.getElementById('user-input');
+    const sendBtn = document.getElementById('send-btn');
+    const messagesContainer = document.getElementById('messages');
+
+    function appendMessage(text, className) {
+      const msg = document.createElement('div');
+      msg.classList.add('message', className);
+      msg.innerText = text;
+      messagesContainer.appendChild(msg);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    async function sendMessage() {
+      const text = inputBox.value.trim();
+      if (!text) return;
+      appendMessage(text, 'user');
+      inputBox.value = '';
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text })
+        });
+
+        // Flask → Rasa → Flask로 전달된 배열 응답
+        const data = await res.json();
+
+        if (Array.isArray(data) && data.length) {
+          data.forEach(item => appendMessage(item.text, 'bot'));
+        } else {
+          appendMessage('죄송해요, 응답이 없어요.', 'bot');
+        }
+      } catch (err) {
+        appendMessage('서버 오류 발생. 상태를 확인하세요.', 'bot');
+        console.error(err);
+      }
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    inputBox.addEventListener('keypress', e => {
+      if (e.key === 'Enter') sendMessage();
+    });
+  </script>
+</body>
+</html>
