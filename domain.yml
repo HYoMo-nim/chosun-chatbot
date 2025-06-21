@@ -1,9 +1,72 @@
-version: "3.1"
+version: '3.1'
 
 intents:
+  - ask_academic_schedule
+  - ask_club_events
+  - ask_club_events_detail
+  - ask_course_by_name
+  - ask_faq
   - ask_menu
   - ask_notice
+  - ask_professor_info
+  - ask_specific_faq
+  - bot_challenge
+  - goodbye
+  - greet
+  - thank
+
+entities:
+  - academic_date
+  - event_name
 
 actions:
+  - action_academic_schedule
+  - action_answer_faq
+  - action_course_by_name
+  - action_professor_info
   - action_provide_menu
   - action_provide_notice
+  - action_show_club_event_detail
+  - action_show_club_events
+  - action_show_faq_list
+
+slots:
+  event_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: event_name
+  academic_date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: academic_date
+
+responses:
+  utter_greet:
+  - text: 안녕하세요! 조선대학교 캠퍼스 챗봇입니다. 무엇을 도와드릴까요?
+  - text: 반갑습니다! 캠퍼스 생활 정보를 안내해드립니다. 어떤 정보가 필요하신가요?
+
+  utter_goodbye:
+  - text: 안녕히 가세요!
+  - text: 다음에 또 이용해주세요!
+
+  utter_welcome:
+  - text: 천만에요! 다른 도움이 필요하시면 말씀해주세요.
+  - text: 별말씀을요! 더 궁금한 점이 있으시면 언제든지 물어보세요.
+
+  utter_iamabot:
+  - text: 저는 조선대학교 캠퍼스 정보를 안내해드리는 AI 챗봇입니다.
+
+  utter_ask_professor_name:
+  - text: 교수님 성함을 알려주세요.
+
+  utter_ask_course_name:
+  - text: 과목명을 입력해주세요.
+
+  utter_ask_academic_date:
+  - text: "원하시는 날짜를 `예: 6월 30일`처럼 말씀해 주세요."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

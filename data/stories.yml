@@ -6,3 +6,60 @@ stories:
   - intent: ask_menu
   - action: action_provide_menu
 
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_club_events
+  - action: action_show_club_events
+  - intent: thank
+  - action: utter_welcome
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_specific_faq
+  - action: action_answer_faq
+  - intent: thank
+  - action: utter_welcome
+
+- story: challenge path
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: club events path
+  steps:
+  - intent: ask_club_events
+  - action: action_show_club_events
+
+- story: club events detail path
+  steps:
+  - intent: ask_club_events_detail
+  - action: action_show_club_event_detail
+
+- story: faq general path
+  steps:
+  - intent: ask_faq
+  - action: action_show_faq_list
+
+- story: specific faq path
+  steps:
+  - intent: ask_specific_faq
+  - action: action_answer_faq
+
+- story: 교수 정보 질문 흐름
+  steps:
+  - intent: ask_professor_info
+  - action: action_professor_info
+
+- story: 과목 정보 질문 흐름
+  steps:
+  - intent: ask_course_by_name
+  - action: action_course_by_name
+
+- story: 학사일정 질문
+  steps:
+  - intent: ask_academic_schedule
+  - action: action_academic_schedule
