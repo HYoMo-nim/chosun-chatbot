@@ -72,25 +72,33 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. **Rasa 학습 실행**
+4. **Rasa 학습 실행(가상환경안에서 학습실행)**
 ```bash
+cd ~/rasa_project
+source venv/bin/activate
 rasa train
 ```
 
 5. **Rasa 서버 실행 (NLU + Core)**
 ```bash
-rasa run --enable-api
+cd ~/rasa_project
+source venv/bin/activate
+rasa run --enable-api --cors "*" --debug
 ```
 
 6. **Action 서버 실행**
 ```bash
+cd ~/rasa_project
+source venv/bin/activate
 rasa run actions
 ```
 
 7. **Flask 웹 서버 실행 (별도 디렉토리에서)**
 ```bash
-cd web
-python app.py
+cd ~/rasa_project/web
+source ../venv/bin/activate
+python3 app.py
+
 ```
 
 8. **웹 접속**
