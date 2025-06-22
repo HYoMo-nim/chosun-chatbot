@@ -22,9 +22,9 @@
 ---
 
 ## 개발 기간 및 인원
-- **기간**: 2025.03.10 ~ 진행 중  
+- **기간**: 2025.03.10 ~ 2025.06.22  
 - **백엔드 팀원**: 3명  
-
+- **프론트 팀원**: 1명  
 ---
 
 ## 팀원
@@ -32,25 +32,68 @@
 | 이름         | 역할    | GitHub                                        |
 |:------------:|:-------:|:----------------------------------------------:|
 | 김은효(조장) | 백엔드  | [GitHub](https://github.com/HyoMo-nim)        |
-| 정명준       | 백엔드  | [GitHub](https://github.com/godjun123)        |
-| 안민서       | 백엔드  | [GitHub](https://github.com/)                 |
+| 정명준       | 백엔드,프론트  | [GitHub](https://github.com/godjun123)        |
+| 안민서       | 백엔드  | [GitHub](https://github.com/Minmin939)        |
 
 ---
 
 ## 기술 스택
-- **Environment**  
-  - 운영체제(OS): Ubuntu 22.04 LTS  
-- **Backend**  
-  - 언어: Python 3.8  
-  - 프레임워크: Rasa Open Source  
-- **Database**  
-  - Json
-- **Frontend**  
-  - *계획중*  
-- **Version Control**  
-  - Git, GitHub ,GitKraken
+
+- **Environment**
+  - 운영체제(OS): Ubuntu 22.04 LTS
+- **Backend**
+  - 언어: Python 3.8
+  - 프레임워크: Rasa Open Source, Flask
+- **Database**
+  - Json, Excel
+- **Frontend**
+  - HTML, CSS, JavaScript
+- **Version Control**
+  - Git, GitHub, GitKraken
 
 ---
 
 ## 설치 및 실행 방법
 
+1. **레포지토리 클론**
+```bash
+git clone https://github.com/HYoMo-nim/chosun-chatbot.git
+cd chosun-chatbot
+```
+
+2. **가상환경 생성 및 활성화 (Ubuntu 기준)**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. **필수 패키지 설치**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Rasa 학습 실행**
+```bash
+rasa train
+```
+
+5. **Rasa 서버 실행 (NLU + Core)**
+```bash
+rasa run --enable-api
+```
+
+6. **Action 서버 실행**
+```bash
+rasa run actions
+```
+
+7. **Flask 웹 서버 실행 (별도 디렉토리에서)**
+```bash
+cd web
+python app.py
+```
+
+8. **웹 접속**
+- 웹 브라우저에서 `http://localhost:8000` 접속
+
+> ⚠️ 참고: `menu.json`, `academic_schedule.json` 등은 `data/` 폴더에 위치해야 하며, JSON 형식은 사전에 정의된 구조를 따라야 합니다.
